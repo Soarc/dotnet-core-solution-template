@@ -1,0 +1,30 @@
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Authors>Gor Rustamyan</Authors>
+    <Company>ServiceTitan</Company>
+    <Description>The template repo for dotnet core</Description>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <LangVersion>8.0</LangVersion>
+    <Nullable>enable</Nullable>
+    <PackageProjectUrl>https://github.com/soarc/dotnet-core-solution-template</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/soarc/dotnet-core-solution-template</RepositoryUrl>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+  </PropertyGroup>
+    
+  <PropertyGroup>
+    <SolutionDir Condition="$(SolutionDir) == ''">$(MSBuildThisFileDirectory.TrimEnd('\').TrimEnd('/'))\</SolutionDir>
+    <ArtifactsDir>$(SolutionDir)artifacts</ArtifactsDir>
+    <OutputPath>$(ArtifactsDir)</OutputPath>
+    <PackageOutputPath>$(ArtifactsDir)nupkg</PackageOutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <SwashbuckleVersion>5.3.1</SwashbuckleVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Update="Swashbuckle.AspNetCore" Version="$(SwashbuckleVersion)" />
+    <PackageReference Update="Swashbuckle.AspNetCore.ReDoc" Version="$(SwashbuckleVersion)" />
+  </ItemGroup>
+</Project>
