@@ -3,7 +3,9 @@
   <PropertyGroup>
     <SwashbuckleVersion>5.3.1</SwashbuckleVersion>
   </PropertyGroup>
-  <ItemGroup Label="Nupkg Versions">    
+  <ItemGroup Label="Nupkg Versions">
+    <PackageReference Update="coverlet.collector" Version="1.2.1"  />
+    <PackageReference Update="Microsoft.NET.Test.Sdk" Version="16.6.1"/>
     <PackageReference Update="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" IncludeAssets="runtime; build; native; contentfiles; analyzers" />
     <PackageReference Update="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.9.10" />
     

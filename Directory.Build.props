@@ -16,5 +16,9 @@
     <ArtifactsDir>$(SolutionDir)artifacts</ArtifactsDir>
     <OutputPath>$(ArtifactsDir)</OutputPath>
     <PackageOutputPath>$(ArtifactsDir)nupkg</PackageOutputPath>
-  </PropertyGroup> 
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Nerdbank.GitVersioning" />
+  </ItemGroup>
 </Project>
